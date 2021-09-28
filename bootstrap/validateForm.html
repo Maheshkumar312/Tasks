@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="C:/my work/front end/plugins/bootstrap-4.0.0-dist/jQuery/jquery/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="C:/my work/front end/plugins/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <script src="C:/my work/front end/plugins/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    
+ 
+</head>
+<body>
+  
+
+<div class="container">
+  <h2>Form</h2>
+
+  <form action="javascript: getData()" method="POST">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter name" id="name"  value="mahesh"required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" id="email" required>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" id="pwd" required>
+    </div>
+    <div class="form-group">
+      <label>EmployeeSkills:</label>
+      <select class="form-control form-control-sm" id="empskill">
+        <option>---select---</option>
+        <option>java</option>
+        <option>javascript</option>
+        <option>bootstrap</option>
+        <option>nodejs</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>EmployeeSkills:</label>
+      <select  multiple class="form-control" id="empskill">
+        <option>---select---</option>
+        <option>java</option>
+        <option>javascript</option>
+        <option>bootstrap</option>
+        <option>nodejs</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <input type="file" class="form-control-file border" name="file" id="file">
+    </div>
+    <div class="form-check-inline">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio" id="radio" value="male">Male
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio" id="radio" value="female">Female
+      </label>
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember" id="check"> Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+</body>
+<script src="../js/formValid.js"></script>
+
+</html> 

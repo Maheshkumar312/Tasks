@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="simpleApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="../plugins/bootstrap-4.0.0-dist/angular/angular.min.js"></script>
+    <link href="../css/angulartablesort.css" rel="stylesheet">
+   
+</head>
+<body>
+   <div ng-controller="simpleController as cntrl">
+       <h3>Filters to sort data:</h3>
+       <form>
+           search(all fields):<input type="text" ng-model=cntrl.search.$> 
+           search(name field):<input type="text" ng-model=cntrl.search.name> 
+           search(age field):<input type="text" ng-model=cntrl.search.age> 
+           search(city filed):<input type="text" ng-model=cntrl.search.city> 
+          Strict: <input type="checkbox" ng-model=cntrl.strict>
+           Limit:<input type="number" ng-model=cntrl.limit>
+       </form>
+       <h3> Table Details:</h3>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr ng-repeat="entry in cntrl.collection| filter:cntrl.search:cntrl.strict|orderBy: 'city'| limitTo:cntrl.limit"><td>{{$index+1}}</td>
+            <td>{{entry.name}}</td>
+            <td>{{entry.age}}</td>
+            <td>{{entry.city}}</td>
+        </tr>
+    </table>
+    <h3>Form Data:</h3>
+   <form >
+       Name:<input type="text" ng-model="cntrl.newData.name"  required>
+      Age: <input type="number" ng-model="cntrl.newData.age" required>
+      City: <input type="text" ng-model="cntrl.newData.city"  required>
+       <button ng-click="cntrl.addEntry()">Add New Entry</button>
+    </form>
+
+   </div> 
+
+    
+</body>
+<script src="../angularjs/angulartablesort.js"></script>
+</html>  

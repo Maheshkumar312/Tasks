@@ -1,0 +1,18 @@
+table{
+    border-collapse: collapse;
+    margin-top: 20px;
+
+}
+th,td{
+    border:1px solid hsl(133, 81%, 39%);
+    color:red;
+    padding: 10px;
+}
+h3{
+    color:green
+}
+form{
+    width: 200px;
+    padding: 10px
+
+}

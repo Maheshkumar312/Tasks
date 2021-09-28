@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="simpleApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../plugins/bootstrap-4.0.0-dist/angular/angular.min.js"></script>
+   
+</head>
+<body>
+    <div ng-controller="simpleController">
+    
+   <ul>
+       <li ng-repeat="entry in collection">{{$index}}- {{$first}}-{{$middle}}-{{$last}}-{{$even}}-{{$odd}}-{{ entry.name}}</li>
+   </ul>
+ 
+    
+   <h1>use ng repeat star and end</h1>
+   <h1 ng-repeat-start="entry in collection" >data</h1>
+   <p>{{ entry.name}}</p>
+   <h2 ng-repeat-end>dataend</h2>
+
+  <h1> without using controller(using ng-init</h1>
+
+  <div ng-init="collection=[{name:'mahesh'},{name:'mahesh'}, {name:'mahesh'}];">
+    
+    <ul>
+        <li ng-repeat="entry in collection">{{ entry.name}}</li>
+    </ul>
+    </div>
+
+</div>
+    
+</body>
+<script src="../angularjs/angularsecond.js"></script>
+</html>  

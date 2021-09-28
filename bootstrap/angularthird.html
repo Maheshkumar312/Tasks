@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="simpleApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../plugins/bootstrap-4.0.0-dist/angular/angular.min.js"></script>
+    <link href="../css/angularthird.css" rel="stylesheet"
+   
+</head>
+<body>
+   <div ng-controller="simpleController">
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+        </tr>
+        <tr ng-repeat="entry in collection"><td>{{$index+1}}</td><td>{{entry.name}}</td></tr>
+    </table>
+    <p>Total entry={{collection.length}}</p>
+       <ul>
+           <li ng-repeat="entry in collection">{{entry.name}}</li>
+       </ul>
+       <input type="text" ng-model="newData">
+       <button ng-click="addEntry()">add</button>
+
+   </div> 
+
+    
+</body>
+<script src="../angularjs/angularthird.js"></script>
+</html>  

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="C:/my work/front end/plugins/bootstrap-4.0.0-dist/jQuery/jquery/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="C:/my work/front end/plugins/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <script src="C:/my work/front end/plugins/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+  
+    <title>employee table</title>
+    <style>
+        .table {
+    margin: 0 auto;
+    margin-top: 150px;
+    width: 80%;
+}
+.table-title .float-right{
+    margin-right: 150px;
+    margin-top: 90px;
+}
+.topnav{
+    text-align: center;
+    background-color:aqua;
+  color:red;
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        
+<div class="table-title" id="tid">
+                
+     <div class="  topnav"><h2>EMPLOYEE DETAILS</h2></div>
+        <div class="">
+           <button type="button" class="btn btn-warning float-right"><a href="../bootstrap/addemp.html"  target="_blank">Add New</a></button>
+         </div>
+     </div>
+</div>
+    <table class="table table-bordered  table-hover"  >
+        <thead class="table-danger">
+          <tr>
+            <th>Empid</th>
+            <th>EmpName </th>
+            <th>EmpSkills</th>
+         </tr>
+        </thead>
+        <tbody id="add">
+          <tr>
+            <th>1</th>
+            <td>Employee1</td>
+            <td>java</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Employee2</td>
+            <td>.Net</td>
+         </tr>
+          <tr>
+            <th>3</th>
+            <td>Employee3</td>
+            <td>python</td>
+           </tr>
+        </tbody>
+        </table>
+    
+</body>
+</html>

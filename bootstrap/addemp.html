@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="C:/my work/front end/plugins/bootstrap-4.0.0-dist/jQuery/jquery/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="C:/my work/front end/plugins/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <script src="C:/my work/front end/plugins/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+ 
+    <title>Document</title>
+    <style>
+        .text-warning
+        {
+            text-align: center;
+        }
+      
+    </style>
+</head>
+<body>
+    <script>
+    function form()
+  {
+    var json={
+        eid:$('#eid').val(),
+        ename:$('#ename').val(),
+        empskill:$('#empskill').val()
+    }
+    var htmlstr="";
+     
+        htmlstr='<tr>';
+       
+        htmlstr+='<td>'+arr[i].eid+'</td>';
+        htmlstr+='<td>'+arr[i].ename+'</td>';
+        htmlstr+='<td>'+arr[i].empskill+'</td>';
+       htmlstr+='</tr>';
+       $("add").append(htmlstr);
+        
+}
+
+  
+</script>
+    
+<div class="container">
+  <h2 class="jumbotron text-center text-primary ">ADD EMPLOYEE</h2>
+
+  <form  action="table.html">
+    <div class="form-group">
+      <label >Empid:</label>
+      <input type="text" class="form-control" id="eid" placeholder="Enter emp id"  required>
+    </div>
+    <div class="form-group">
+      <label>EmpName:</label>
+      <input type="text" class="form-control" placeholder="Enter Emp name" id="ename" required>
+    </div>
+    <div class="form-group">
+        <label>EmployeeSkills:</label>
+        <select class="form-control" id="empskill">
+          <option>---select---</option>
+          <option>java</option>
+          <option>javascript</option>
+          <option>bootstrap</option>
+          <option>nodejs</option>
+        </select>
+      </div>
+    <button type="submit" onclick="form()" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</body>
+<script src="../bootstrap/table.html"></script>
+</html>

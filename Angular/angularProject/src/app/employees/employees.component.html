@@ -1,0 +1,156 @@
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+  <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="">DashBorad</a>
+      </div>
+      <ul class="nav navbar-nav">
+          <li><button class="btn btn-success" type="submit" routerLink="/about">Aboutus</button></li>
+          <li><button class="btn btn-success" type="submit"  routerLink="/employees" >Employees</button></li>
+          <li><button class="btn btn-success" type="submit" routerLink="/sports">Sports</button></li>
+          <li><button class="btn btn-success" type="submit"  routerLink="/feedback">Feedback</button></li>
+          </ul>
+      
+    </div>
+  </nav>
+<div class="card">
+  <div class="col-md-8 mt-4 mb-4">
+    <h1>Employee Data:</h1>
+    <div class="d-flex ">
+      <a class="btn btn-warning" href="/dashboard" role="button">Back  </a>
+      <button  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Employye</button>
+    </div>
+  <table  datatable [dtOptions]="dtOptions" class="table table-bordered row-border hover">
+    <thead>
+      <tr>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Contact No</th>
+        <th>Date of Birth</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+           <td> Mahesh</td>
+           <td> kumar</td>
+           <td> Mah@gmail.com</td>
+           <td>456789</td>
+           <td> 7 /4/98</td>
+        </tr>
+        <tr>
+          <td> suresh</td>
+          <td> kumar</td>
+          <td> Mah@gmail.com</td>
+          <td>456789</td>
+          <td> 7 /4/98</td>
+       </tr>
+       <tr>
+        <td> mouli</td>
+        <td> kumar</td>
+        <td> Mah@gmail.com</td>
+        <td>456789</td>
+        <td> 7 /4/98</td>
+     </tr>
+        <tr>
+            <td>naresh</td>
+            <td> kumar</td>
+            <td> Mah@gmail.com</td>
+            <td>456789</td>
+            <td> 7 /4/98</td>
+         </tr>
+      <tr *ngFor = "let item of listData">
+        <td>{{item.fname}}</td>
+        <td>{{item.lname}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.ContactNo}}</td>
+        <td>{{item.dob}}</td>
+        
+      </tr>
+    </tbody>
+  </table>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Employye Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="userForm">
+          <div class=" form-group mb-3">
+            <label for="fname" class="form-label">FirstName</label>
+            <input type="text" class="form-control" formControlName="fname"  >
+            
+          </div>
+          <div class=" form-group mb-3">
+            <label for="lname" class="form-label">LastName</label>
+            <input type="text" class="form-control"  formControlName="lname" id="exampleInputPassword1">
+          </div>
+          <div class=" form-group mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" formControlName="email" id="exampleInputPassword1">
+          </div>
+          <div class=" form-group mb-3">
+            <label for="number" class="form-label">ContactNo</label>
+            <input type="number" class="form-control" formControlName="ContactNo" id="exampleInputPassword1">
+          </div>
+          <div class=" form-group mb-3">
+            <label for="dob" class="form-label">dob</label>
+            <input type="date" class="form-control" formControlName="dob" id="exampleInputPassword1">
+          </div>
+          
+        </form>...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"   data-bs-dismiss="modal" (click)="addItem()">Add </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

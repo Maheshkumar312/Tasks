@@ -1,0 +1,24 @@
+<!DOCTYPE <html>
+    
+</html>
+
+<html>
+<script src="../plugins/bootstrap-4.0.0-dist/angular/angular.min.js"></script><!DOCTYPE html>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+<p>The url of this page is:</p>
+<h3>{{myUrl}}</h3>
+</div>
+
+<p> using $location service.</p>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $location) {
+    $scope.myUrl = $location.absUrl();
+});
+</script>
+
+</body>
+</html>

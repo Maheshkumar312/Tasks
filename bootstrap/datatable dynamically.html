@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <title>Datatable</title>
+</head>
+<body>
+    <H3 style="color:red;">Form Data:</H3>
+    First Name: <input type="text" name="fname" id="fname" /><br/><br/>
+    Last Name: <input type="text" name="lname" id="lname" /><br/><br/>
+    Age: <input type="text" name="age" id="age" /><br/><br/>
+    <button onclick="addRow();">Add Row</button><br/><br/>
+<h3 style="color: green;">Table:</h3>
+    <table id="tb">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+            <tbody>
+            <tr>
+                <td>Mahesh</td>
+                <td>D</td>
+                <td>24</td>
+            </tr>
+            
+             <tr>
+                <td>ram</td>
+                <td>A</td>
+                <td>20</td>
+            </tr>
+            
+             <tr>
+                <td>seenu</td>
+                <td>c</td>
+                <td>30</td>
+            </tr>
+            
+             <tr>
+                <td>mohammed</td>
+                <td>e</td>
+                <td>40</td>
+            </tr>
+            
+             <tr>
+                <td>sharukh</td>
+                <td>G</td>
+                <td>50</td>
+            </tr>
+        </tbody>
+        <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+        
+<script>
+    $(document).ready(function () {
+        $('#tb').DataTable();
+    });
+    
+    function addRow()
+            {
+               
+                var fname = document.getElementById('fname').value;
+                 var lname = document.getElementById('lname').value;
+                  var age = document.getElementById('age').value;
+                  
+                  var table = document.getElementsByTagName('table')[0];
+                  
+                  
+                  var newRow = table.insertRow(table.rows.length/2+1);
+                  
+                  // add cells to the row
+                  var cel1 = newRow.insertCell(0);
+                  var cel2 = newRow.insertCell(1);
+                  var cel3 = newRow.insertCell(2);
+                  
+                  // add values to the cells
+                  cel1.innerHTML = fname;
+                  cel2.innerHTML = lname;
+                  cel3.innerHTML = age;
+            }
+</script>
+    </table>
+    
+</body>
+</html>

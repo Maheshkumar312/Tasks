@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+  <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="">DashBorad</a>
+      </div>
+      <ul class="nav navbar-nav">
+          <li><button class="btn btn-success" type="submit" routerLink="/about">Aboutus</button></li>
+          <li><button class="btn btn-success" type="submit"  routerLink="/employees" >Employees</button></li>
+          <li><button class="btn btn-success" type="submit" routerLink="/sports">Sports</button></li>
+          <li><button class="btn btn-success" type="submit"  routerLink="/feedback">Feedback</button></li>
+          </ul>
+      
+    </div>
+  </nav>
+
+<div class="card"  >
+  <h1  class="card-header info-color white-text text-center py-4" >Feedback Form</h1>
+<form #feedbackForm="ngForm" (ngSubmit)="registerUser(feedbackForm)" class="form-group  text-center  border-light p-5">
+    <div><label for="name">Name:</label>
+    <input type="text" name="name" id="name" ngModel class="form-control  "></div>
+    <div><label for="number">Number:</label>
+    <input type="number" name="number" id="number" ngModel class="form-control "></div>
+    <div><label for="email">Email:</label>
+    <input type="text" name="email" id="email" ngModel class="form-control "></div>
+  
+    <div><label for="description">Description:</label>
+    <input type="text" name="description" id="description" ngModel class="form-control "><br></div>
+    <div class="pull-down" >
+    <button class="btn btn-info  btn-block" type="submit">Submit</button>
+    <a  href="/dashboard" >Back</a>
+    </div>
+  </form>
+  

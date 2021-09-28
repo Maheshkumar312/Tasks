@@ -1,0 +1,9 @@
+<h1> Simple form in angular</h1>
+<form #simpleForm="ngForm" (ngSubmit)="getValues(simpleForm.value)">
+  <input type="text" ngModel name="user" placeholder=" enter user name"><br>
+  <input type="text" ngModel name="age" placeholder=" enter user age"><br>
+  <input type="text" ngModel name="address" placeholder=" enter user address"><br>
+  <input type="password" ngModel name="password" placeholder=" enter user password"><br><br>
+
+  <button>Get User Values</button>
+</form>
