@@ -1,0 +1,7 @@
+{
+  "name": "AppPro",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
